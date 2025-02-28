@@ -12,6 +12,7 @@ class Vuls(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     CVE_ID = Column(String(255))
     Published_Date = Column(Date)
+    Published_Year = Column(Integer)
     Status = Column(String(100))
     Description = Column(Text)
     Base_Severity = Column(String(100))
@@ -28,3 +29,5 @@ class Vuls(Base):
     Obtain_User_Privilege = Column(Boolean)
     Obtain_Other_Privilege = Column(Boolean)
     User_Interaction_Required  = Column(Boolean)
+    Software = Column(String(500))
+    Version_Affected = Column(String(500))

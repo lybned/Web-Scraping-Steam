@@ -35,6 +35,7 @@ CREATE TABLE IF NOT EXISTS Vuls (
     id INT AUTO_INCREMENT PRIMARY KEY,
     CVE_ID VARCHAR(255),
     Published_Date Date,
+    Published_Year INT,
     Status VARCHAR(100),
     Description TEXT,
     Base_Severity VARCHAR(100),
@@ -50,7 +51,9 @@ CREATE TABLE IF NOT EXISTS Vuls (
     Obtain_All_Privilege BOOLEAN,
     Obtain_User_Privilege BOOLEAN,
     Obtain_Other_Privilege BOOLEAN,
-    User_Interaction_Required BOOLEAN
+    User_Interaction_Required BOOLEAN,
+    Software VARCHAR(500),
+    Version_Affected VARCHAR(500)
 )
 """)
 print("Table created.")
